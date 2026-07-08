@@ -1,0 +1,8 @@
+flask
+flask-cors
+scikit-learn
+pandas
+numpy
+gunicorn
+datasets
+huggingface_hub

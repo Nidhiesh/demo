@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Cyber Shield - ML Scam Detector",
+  "version": "3.2",
+  "description": "AI-powered scam detection matching training dataset patterns on WhatsApp Web and Gmail with high precision",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+
+  "host_permissions": [
+    "*://*.whatsapp.com/*",
+    "*://*.web.whatsapp.com/*",
+    "*://*.mail.google.com/*",
+    "*://mail.google.com/*",
+    "https://*.firebaseio.com/*",
+    "https://*.googleapis.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Cyber Shield - ML Detector"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.whatsapp.com/*",
+        "*://*.mail.google.com/*",
+        "*://mail.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

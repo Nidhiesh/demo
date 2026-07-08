@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Shield</title>
+    <link rel="stylesheet" href="popup.html.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Active Indicator -->
+        <div class="active-indicator" id="activeIndicator">
+            <span class="pulse-dot"></span>
+            <span class="active-text">Extension Active</span>
+        </div>
+
+        <div class="header">
+            <h1>🛡️ Cyber Shield</h1>
+            <p class="subtitle">ML-Powered Scam Detection</p>
+        </div>
+
+        <div class="status-container">
+            <div id="statusBadge" class="status-badge">
+                <span class="status-dot"></span>
+                <span id="statusText">Protection Active</span>
+            </div>
+            
+            <div id="backendStatus" class="backend-status">
+                <span id="backendIcon">⏳</span>
+                <span id="backendText">Backend: Checking...</span>
+            </div>
+        </div>
+
+        <div class="settings">
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="toggleDetection" checked>
+                    <span class="label-text">Enable ML Detection</span>
+                </label>
+                <p class="description">Automatically scan all messages and emails</p>
+            </div>
+
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="toggleURL" checked>
+                    <span class="label-text">Block Suspicious Links</span>
+                </label>
+                <p class="description">Prevent clicking dangerous URLs</p>
+            </div>
+
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="toggleNotifications" checked>
+                    <span class="label-text">Show Notifications</span>
+                </label>
+                <p class="description">Get alerts when scams detected</p>
+            </div>
+        </div>
+
+        <div class="platforms">
+            <h3>Protected Platforms</h3>
+            <div class="platform-list">
+                <div class="platform-badge">💬 WhatsApp Web</div>
+                <div class="platform-badge">📧 Gmail</div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h3>Statistics</h3>
+            <div id="statsContainer" class="stats-content">
+                <p>Loading...</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Real-time ML-powered protection</p>
+            <small>Version 3.1 | WhatsApp Web Enhanced | Always running in background</small>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
